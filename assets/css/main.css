@@ -54,7 +54,7 @@ section:first-child {
 }
 
 section {
-  height: 50vh;
+  min-height: 50vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -62,6 +62,7 @@ section {
   padding: 5rem 5rem;
   gap: 5rem;
   animation: light-intro 2s ease-out forwards;
+  flex-wrap: wrap;
 
   &::before,
   &::after {
@@ -91,6 +92,8 @@ section {
 img {
   box-shadow: 0 0 1.5rem #00000050;
   border-radius: 1rem;
+  height: 100%;
+  max-height: 25rem;
 }
 
 div {
@@ -120,10 +123,6 @@ div {
   }
 }
 
-img {
-  height: 100%;
-}
-
 @keyframes light-intro {
   0%,
   80% {
@@ -137,4 +136,35 @@ img {
 
 img ~ div {
   align-items: start;
+}
+
+#info1-sec,
+#info3-sec {
+  flex-wrap: wrap-reverse;
+}
+
+@media screen and (max-width: 750px) {
+  section:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  section {
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+
+    div {
+      width: 100%;
+    }
+
+    img {
+      width: 100vw;
+      border-radius: 0;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
 }
