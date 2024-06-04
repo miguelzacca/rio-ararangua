@@ -4,18 +4,28 @@ html {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  background-color: #008cc425;
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2rem;
+  background-color: #008cc430;
+}
+
 body {
-  background-color: #0e0700;
+  background-color: #361b00;
 
   &::before {
     content: "";
     width: 200vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #fff;
-    transform: translateX(-100rem);
+    transform: translateX(0);
     animation: intro 1.5s ease-out forwards;
     z-index: 999;
   }
@@ -24,7 +34,7 @@ body {
 @keyframes intro {
   0%,
   50% {
-    transform: translateX(-100rem);
+    transform: translateX(0);
   }
 
   100% {
@@ -32,6 +42,99 @@ body {
   }
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  overflow: hidden;
+}
+
+section:first-child {
+  margin-top: 3rem;
+}
+
 section {
-  height: 100vh;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 5rem 5rem;
+  gap: 5rem;
+  animation: light-intro 2s ease-out forwards;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 30rem;
+    height: 150rem;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(10rem);
+    opacity: 0.2;
+    background-color: #008cc450;
+  }
+
+  &::before {
+    top: 70%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    top: 30%;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+}
+
+img {
+  box-shadow: 0 0 1.5rem #00000050;
+  border-radius: 1rem;
+}
+
+div {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  flex-direction: column;
+  flex: 1;
+  max-width: 40rem;
+  gap: 2.5rem;
+
+  h2 {
+    font-size: 2.1rem;
+    color: #bbb;
+    width: 100%;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.6rem;
+    color: #999;
+    text-indent: 1rem;
+
+    &::first-letter {
+      font-size: 2rem;
+    }
+  }
+}
+
+img {
+  height: 100%;
+}
+
+@keyframes light-intro {
+  0%,
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+img ~ div {
+  align-items: start;
 }
