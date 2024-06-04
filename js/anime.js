@@ -1,12 +1,12 @@
 "use strict";
 
-export const wait = (ms) => {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-};
-
 {
+  const wait = (ms) => {
+    return new Promise((resolve) => {
+      setTimeout(resolve, ms);
+    });
+  };
+
   const display = document.getElementById("countArea");
 
   const areaKm = 3089;
