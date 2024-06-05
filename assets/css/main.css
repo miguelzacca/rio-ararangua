@@ -58,10 +58,9 @@ section {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   padding: 5rem 5rem;
   gap: 5rem;
-  animation: light-intro 2s ease-out forwards;
   flex-wrap: wrap;
 
   &::before,
@@ -102,7 +101,7 @@ div {
   align-items: end;
   flex-direction: column;
   flex: 1;
-  max-width: 40rem;
+  max-width: 50rem;
   gap: 2.5rem;
 
   h2 {
@@ -115,22 +114,12 @@ div {
   p {
     font-size: 1.6rem;
     color: #999;
-    text-indent: 1rem;
+    text-indent: 2rem;
+    text-align: justify;
 
     &::first-letter {
       font-size: 2rem;
     }
-  }
-}
-
-@keyframes light-intro {
-  0%,
-  80% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
 
