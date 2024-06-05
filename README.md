@@ -1,6 +1,6 @@
 # Rio Araranguá
 
-Site simples sobre bacias hidrográficas de SC. Trabalho da escolar. SESI
+Simple website about SC river basins. School work. SESI
 
 ## Preview
 
