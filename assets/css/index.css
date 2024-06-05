@@ -192,4 +192,8 @@ footer {
       font-size: 3rem !important;
     }
   }
+
+  #container {
+    left: 10rem;
+  }
 }
