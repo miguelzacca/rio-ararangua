@@ -120,11 +120,39 @@ footer {
     animation: footer 0.5s ease-out forwards;
     opacity: 0;
     scale: 0.75;
+    padding-bottom: 2rem;
 
     #countArea {
       margin-left: 0.5rem;
       width: 5rem;
     }
+  }
+}
+
+#container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  background-color: #ffffff25;
+  color: #999;
+  bottom: 0;
+  padding: 0.7rem 2rem;
+  border-radius: 1rem 1rem 0 0;
+  font-size: 1.5rem;
+
+  &,
+  span {
+    text-shadow: 0 0 1rem #00000075;
+  }
+
+  span {
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: translate(0, 25%);
+    border-radius: 50%;
+    background-color: #888;
+    margin-right: 1rem;
   }
 }
 
