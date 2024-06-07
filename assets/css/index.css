@@ -98,11 +98,11 @@ a {
   font-size: 2rem;
   transition: all 0.25s;
   gap: 1rem;
+}
 
-  &:hover {
-    gap: 4rem;
-    color: #fff;
-  }
+a:hover {
+  gap: 4rem;
+  color: #fff;
 }
 
 footer {
