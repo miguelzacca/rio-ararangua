@@ -16,19 +16,19 @@ html {
 
 body {
   background-color: #361b00;
+}
 
-  &::before {
-    content: "";
-    width: 200vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    transform: translateX(0);
-    animation: intro 1.5s ease-out forwards;
-    z-index: 999;
-  }
+body::before {
+  content: "";
+  width: 200vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  transform: translateX(0);
+  animation: intro 1.5s ease-out forwards;
+  z-index: 999;
 }
 
 @keyframes intro {
@@ -62,30 +62,30 @@ section {
   padding: 5rem 5rem;
   gap: 5rem;
   flex-wrap: wrap;
+}
 
-  &::before,
-  &::after {
-    content: "";
-    width: 30rem;
-    height: 150rem;
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(10rem);
-    opacity: 0.2;
-    background-color: #008cc450;
-  }
+section::before,
+section::after {
+  content: "";
+  width: 30rem;
+  height: 150rem;
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(10rem);
+  opacity: 0.2;
+  background-color: #008cc450;
+}
 
-  &::before {
-    top: 70%;
-    left: 0;
-    transform: translate(-50%, -50%);
-  }
+section::before {
+  top: 70%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
 
-  &::after {
-    top: 30%;
-    right: 0;
-    transform: translate(50%, -50%);
-  }
+section::after {
+  top: 30%;
+  right: 0;
+  transform: translate(50%, -50%);
 }
 
 img {
@@ -103,24 +103,24 @@ div {
   flex: 1;
   max-width: 50rem;
   gap: 1.5rem;
+}
 
-  h2 {
-    font-size: 2.1rem;
-    color: #bbb;
-    width: 100%;
-    text-align: center;
-  }
+div h2 {
+  font-size: 2.1rem;
+  color: #bbb;
+  width: 100%;
+  text-align: center;
+}
 
-  p {
-    font-size: 1.6rem;
-    color: #999;
-    text-indent: 2rem;
-    text-align: justify;
+div p {
+  font-size: 1.6rem;
+  color: #999;
+  text-indent: 2rem;
+  text-align: justify;
+}
 
-    &::first-letter {
-      font-size: 2rem;
-    }
-  }
+div p::first-letter {
+  font-size: 2rem;
 }
 
 img ~ div {
@@ -142,18 +142,18 @@ img ~ div {
     justify-content: center;
     align-items: center;
     padding: 5rem 2rem;
+  }
 
-    div {
-      width: 100%;
-    }
+  section div {
+    width: 100%;
+  }
 
-    img {
-      width: 100vw;
-      border-radius: 0;
-    }
+  section img {
+    width: 100vw;
+    border-radius: 0;
+  }
 
-    p {
-      text-align: center;
-    }
+  section p {
+    text-align: center;
   }
 }

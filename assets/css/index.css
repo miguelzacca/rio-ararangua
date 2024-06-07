@@ -13,7 +13,7 @@ body {
   background-size: 100vw 100vh;
   height: 100vh;
   opacity: 1;
-  backdrop-filter: brightness(1) grayscale(0.5) contrast(1.5);
+  backdrop-filter: brightness(1) grayscale(0.5);
   display: grid;
   grid-template-areas: "main" "footer";
   grid-template-rows: auto 20rem;
@@ -50,26 +50,26 @@ main {
   grid-area: main;
   display: grid;
   place-items: center;
+}
 
-  div {
-    background-color: #000000dd;
-    border-radius: 1.5rem;
-    padding: 3rem 5rem;
-    animation: div-h1 0.5s linear forwards;
-    border: 0.2rem solid #ffffff05;
-  }
+main div {
+  background-color: #000000dd;
+  border-radius: 1.5rem;
+  padding: 3rem 5rem;
+  animation: div-h1 0.5s linear forwards;
+  border: 0.2rem solid #ffffff05;
+}
 
-  h1 {
-    color: #fff;
-    text-shadow: 0 0 1rem #00000075;
-    font-size: 2.5rem;
-    letter-spacing: 4.5rem;
-    transform: translateY(20rem);
-    width: max-content;
-    opacity: 0;
-    font-weight: 300;
-    animation: home-h1 1s ease-out forwards;
-  }
+main h1 {
+  color: #fff;
+  text-shadow: 0 0 1rem #00000075;
+  font-size: 2.5rem;
+  letter-spacing: 4.5rem;
+  transform: translateY(20rem);
+  width: max-content;
+  opacity: 0;
+  font-weight: 300;
+  animation: home-h1 1s ease-out forwards;
 }
 
 @keyframes div-h1 {
@@ -108,25 +108,25 @@ a {
 footer {
   grid-area: footer;
   background-image: linear-gradient(to top, #000000aa, #00000088, #00000000);
+}
 
-  p {
-    font-size: 2.2rem;
-    color: #fff;
-    display: flex;
-    justify-content: start;
-    width: max-content;
-    gap: 1rem;
-    text-shadow: var(--shadow-text);
-    animation: footer 0.5s ease-out forwards;
-    opacity: 0;
-    scale: 0.75;
-    padding-bottom: 2rem;
+footer p {
+  font-size: 2.2rem;
+  color: #fff;
+  display: flex;
+  justify-content: start;
+  width: max-content;
+  gap: 1rem;
+  text-shadow: var(--shadow-text);
+  animation: footer 0.5s ease-out forwards;
+  opacity: 0;
+  scale: 0.75;
+  padding-bottom: 2rem;
+}
 
-    #countArea {
-      margin-left: 0.5rem;
-      width: 5rem;
-    }
-  }
+footer p #countArea {
+  margin-left: 0.5rem;
+  width: 5rem;
 }
 
 #container {
@@ -140,20 +140,20 @@ footer {
   padding: 0.7rem 2rem;
   border-radius: 1rem 1rem 0 0;
   font-size: 1.5rem;
+}
 
-  &,
-  span {
-    text-shadow: 0 0 1rem #00000075;
-  }
+#container,
+div span {
+  text-shadow: 0 0 1rem #00000075;
+}
 
-  span {
-    width: 1.5rem;
-    height: 1.5rem;
-    transform: translate(0, 25%);
-    border-radius: 50%;
-    background-color: #888;
-    margin-right: 1rem;
-  }
+div span {
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: translate(0, 25%);
+  border-radius: 50%;
+  background-color: #888;
+  margin-right: 1rem;
 }
 
 @keyframes footer {
@@ -174,23 +174,23 @@ footer {
 
   footer {
     padding-bottom: 10rem;
+  }
 
-    p,
-    a {
-      font-size: 2rem;
-    }
+  footer p,
+  footer a {
+    font-size: 2rem;
   }
 
   main {
     padding-inline: 2rem;
+  }
 
-    div {
-      max-width: 100% !important;
-    }
+  main div {
+    max-width: 100% !important;
+  }
 
-    h1 {
-      font-size: 3rem !important;
-    }
+  main h1 {
+    font-size: 3rem !important;
   }
 
   #container {
