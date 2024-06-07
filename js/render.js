@@ -6,9 +6,17 @@
     (_, i) => `../assets/img/image${i + 1}.webp`
   );
 
-  for (const url of imageUrls) {
-    const img = new Image();
-    img.src = url;
-    img.onload;
-  }
+  const loadImage = (url) => {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.src = url;
+      img.onload = resolve();
+    });
+  };
+
+  (async () => {
+    for (const url of imageUrls) {
+      await loadImage(url);
+    }
+  })();
 }
