@@ -46,6 +46,28 @@ body {
   }
 }
 
+.light-intro {
+  position: absolute;
+  z-index: 3;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  animation: light-intro 2s ease-in-out forwards;
+}
+
+@keyframes light-intro {
+  90%,
+  100% {
+    background-color: transparent;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
 main {
   grid-area: main;
   display: grid;
